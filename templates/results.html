@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% if color %}
+
+{% endif %} 
+{% block content %}
+    {%  block title %}Results{% endblock %}
+<h2>Results</h2>
+    <div>
+        {% for m in member %}
+            <p>Handle: {{ m['handle'] }}</p>
+            <img src="{{ m['image'] }}" />
+            <p>Rank: {{ m['rank'] }}</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}
